@@ -1,6 +1,9 @@
 """Calculates the nth line of conway sequence
 
-Warning! This sequence can make you ill. The reasoning is simple but unusual: Read a line aloud whilst looking at the line above and you will notice that each line (except the first) makes ​​an inventory of the previous line.
+Warning! This sequence can make you ill.
+The reasoning is simple but unusual: Read a line aloud whilst
+looking at the line above and you will notice that each line (except the first)
+makes ​​an inventory of the previous line.
 
 1
 1 1
@@ -9,7 +12,9 @@ Warning! This sequence can make you ill. The reasoning is simple but unusual: Re
 1 1 1 2 2 1
 3 1 2 2 1 1
 
-This sequence refers to a technique used to encode ranges in order to compress identical values ​​without losing any information. This type of method is used, amongst others, to compress images.
+This sequence refers to a technique used to encode ranges in order
+to compress identical values ​​without losing any information. This
+type of method is used, amongst others, to compress images.
 """
 
 
@@ -30,7 +35,8 @@ def run_length_encoder(message_to_encode):
     if message_to_encode[i] != message_to_encode[i - 1]:
       break_points.append(i)
   break_points.append(len(message_to_encode))
-  encoded = [(message_to_encode[break_points[i - 1]], break_points[i] - break_points[i - 1])
+  encoded = [(message_to_encode[break_points[i - 1]],
+  break_points[i] - break_points[i - 1])
              for i in range(1, len(break_points))]
   return encoded
 
