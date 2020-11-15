@@ -15,11 +15,6 @@ def path_cost(path):
 
 def generate_path(goal_node, visited):
   """Returns the path leading to the goal node
-  Args:
-    goal_node(dict): goal_node
-    visited(dict): all visited nodes
-  Returns:
-    path: path leading to the goal state
   """
   goal_state = goal_node['state']
   path = [goal_state]
@@ -36,8 +31,8 @@ def goal_test(goal_test_state):
   Returns:
     goal_match(boolean): True if state is goal
   """
-  goal_state = (1, 2, 3, 4, 5, 6, 7, 8, 0)
-  return goal_state == goal_test_state
+  pass
+  # return goal_test_state()
 
 
 def operator(operator_state):
@@ -113,7 +108,15 @@ def general_search(fringe, visited, limiting_depth):
 
 
 root_node = {
-  'state': (3, 2, 4, 1, 7, 6, 0, 8, 5),
+  'state': (
+    '#', '#', 'B', 'B', 'B', '#', '#',
+    '#', '#', 'B', 'B', 'B', '#', '#',
+    'B', 'B', 'B', 'B', 'B', 'B', 'B',
+    'B', 'B', 'B', 'W', 'B', 'B', 'B',
+    'B', 'B', 'B', 'B', 'B', 'B', 'B',
+    '#', '#', 'B', 'B', 'B', '#', '#',
+    '#', '#', 'B', 'B', 'B', '#', '#',
+  ),
   'parent': None,
   'depth': 0,
 }
